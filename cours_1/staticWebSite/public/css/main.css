@@ -1,7 +1,126 @@
 
 /*I. Attribuer des couleurs aux différentes parties de la page HTML*/
+.header-portfolio {
+    background-color: rgb(230, 181, 46);
+    border-radius: 5px;
+    padding-left: 1.5rem;   
+    padding-right: 1.5rem; 
+    color: black;
+}
+
+
+.highlight-name {
+    color: black;
+    font-weight: bold;
+    font-size: larger;
+    background-color: rgb(46, 202, 230);
+    border-radius: 5px;
+    padding-left: 1rem;   
+    padding-right: 1rem; 
+    padding-top: 0.5rem;   
+    padding-bottom: 0.5rem; 
+}
+
+#experiences {
+    color: rgb(173, 129, 8);
+    
+}
+
+.servier-skill, .i3s-skill {
+    color: black;
+    background-color: rgb(46, 202, 230);
+    border-radius: 5px;
+    
+}
+
+#servier, #i3s, #EFREI, #BUT, #DU {
+    color: black;  
+    
+}
+
 
 /*II. Centrer tous les éléments*/
+h1[data-i18n="home-title"] {
+    text-align: center;
+}
+
+p[data-i18n="home-subtitle"]{
+    text-align: center;
+}
+
+h1[data-i18n="home-skills-title"] {
+    text-align: center;
+}
+
+p[data-i18n="home-description"] {
+    text-align: center;
+    margin: 10px 46px; /* Centrer horizontalement le paragraphe */
+}
+
+.skills-list {
+    text-align: center;
+    padding-left: 0;   /* Supprimer le padding gauche par défaut du ul pour un centrage aligné avec le h1 */
+    margin: 10px auto; /* Centrer horizontalement le ul */
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#reseaux-localisation {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center; /* horizontal */
+}
+
+#localisation iframe {
+    max-width: 100%;
+}
+
+#localisation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-links {
+    align-items: center;
+}
+
+
+.Experience, .Formation {
+    margin: 20px 20px;}
+
+#EFREI, #BUT, #DU {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    margin : 1px 20px;
+}
+
+
+#servier, #i3s {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    margin : 1px 20px;
+    
+}
+
+ul.servier-skill, ul.i3s-skill {
+    margin-right: 15px;
+}
+
+
+
 
 /*II.a.centrer le tableau*/
 
@@ -9,6 +128,39 @@
 
 /*III. La barre de navigation*/
 
+/* Navbar sur la même ligne (titre et liens) */
+.navbar {
+    display: flex;  
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Liens de navigation en ligne, alignés avec le header */
+ul.nav-links {
+    display: flex;
+    gap: 5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-left: 1.5rem;   
+    padding-right: 1.5rem;  
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    align-items: center;
+    position: static;
+    background-color: rgb(230, 181, 46);
+    border-radius: 5px;
+}
+
 /*IV. Image*/
 
 /*V. Compétences*/
+
+/* sauf nav-links et social-links  */
+ul:not(.social-links) {
+    list-style: square;
+} 
+
+ul.nav-links, ul.skills-list {
+    list-style: none;
+}
