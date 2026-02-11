@@ -59,14 +59,18 @@ body > main {
 
 .servier-skill, .i3s-skill {
     color: black;
-    background-color: rgb(46, 202, 230);
-    border-radius: 5px;
-    
 }
 
 #servier, #i3s, #EFREI, #BUT, #DU {
     color: black;  
     
+}
+
+.Experience, .Formation {
+    background-color: rgb(220, 224, 225);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 
@@ -86,12 +90,6 @@ h1[data-i18n="home-skills-title"] {
 p[data-i18n="home-description"] {
     text-align: center;
     margin: 10px 46px; /* Centrer horizontalement le paragraphe */
-}
-
-.skills-list {
-    text-align: center;
-    padding-left: 0;   /* Supprimer le padding gauche par défaut du ul pour un centrage aligné avec le h1 */
-    margin: 10px auto; /* Centrer horizontalement le ul */
 }
 
 /* Trois colonnes côte à côte : Contact | Mes Réseaux | Localisation */
@@ -137,30 +135,40 @@ p[data-i18n="home-description"] {
 
 .social-links {
     align-items: center;
+    padding: 0px;
 }
 
 
 .Experience, .Formation {
-    margin: 20px 20px;}
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px;
+}
 
 #EFREI, #BUT, #DU {
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    justify-content: space-between;
     align-items: center;
     margin : 1px 20px;
 }
 
+.efrei-logo, .but-logo, .artois-logo {
+    width: 80px;
+    height: auto;
+}
 
 #servier, #i3s {
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    justify-content: space-between;
     align-items: center;
     margin : 1px 20px;
-    
+}
+
+.servier-logo, .i3s-logo {
+    width: 80px;
+    height: auto;
 }
 
 ul.servier-skill, ul.i3s-skill {
@@ -216,16 +224,14 @@ ul.nav-links {
     list-style: none;
 }
 
-ul.nav-links a,
-.nav-links a {
-    text-decoration: none;
-    color: inherit;
+.Projet {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin: 20px 20px;
 }
 
-ul.nav-links a:hover,
-.nav-links a:hover {
-    color: blue;
-}
 
 /* Section À propos : photo à côté du contenu (flex row) */
 #about {
@@ -268,7 +274,8 @@ img.profile-photo {
     gap: 0.75rem;
     list-style: none;
     max-width: 800px;
-    margin: 1rem auto;
+    margin: 1rem 10px;
+    padding: 0px;
 }
 
 .skills-list li {
@@ -277,13 +284,38 @@ img.profile-photo {
     padding: 0.5rem 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 0.5rem;
 }
 
-/* sauf nav-links et social-links  */
-ul:not(.social-links) {
-    list-style: square;
-} 
+.Projet span{
+    display: inline-block;
+    background-color: rgb(230, 181, 46);
+    color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 0.5rem;
+}
 
-ul.nav-links, ul.skills-list {
+
+ul.nav-links, ul.skills-list, ul.social-links {
     list-style: none;
+}
+
+ul.nav-links a, ul.social-links a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul.nav-links a:hover, ul.social-links a:hover {
+    color: blue;
+}
+
+
+.conteneur {
+display: inline-block;
+flex-direction: row;
+justify-content: right;
+align-items: center;
+flex-wrap: wrap;
 }
