@@ -319,3 +319,7 @@ justify-content: right;
 align-items: center;
 flex-wrap: wrap;
 }
+
+.footer {
+    text-align: center;
+}
