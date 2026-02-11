@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Demo Grid (apprentissage)
+cours_1/staticWebSite/demo-grid-areas.html
+cours_1/staticWebSite/public/css/demo-grid-areas.css
