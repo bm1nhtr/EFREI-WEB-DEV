@@ -1,3 +1,6 @@
+// Structure Car en anglais (model, owner). Le JSON utilise modele/proprietaire (FR).
+// Le constructeur ne reçoit que 6 paramètres : seuls model.name et model.topSpeed (et owner.*) sont remplis ;
+// brand, modeleId, serialNumber restent donc "", null, null sauf si on les assigne ailleurs.
 class Car{
     id = null
     model = {
@@ -32,8 +35,13 @@ class Car{
     }
 
     static sayHello() {
-        console.log("Hello I am from the Car class !")
+        console.log("Hello I am from the Car class !");
+    }
+
+    // Méthode statique qui décrit à quoi sert la classe Car (pour l'exercice 2).
+    static decrire() {
+        console.log("La classe Car représente une voiture : elle contient l'id, le modèle, les infos du propriétaire (prénom, nom, âge) et la vitesse de pointe.");
     }
 }
 
-export default Car
+export default Car;
